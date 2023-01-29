@@ -4,10 +4,10 @@ lock "~> 3.17.1"
 set :application, "system_classroom"
 
 set :git
-set :repo_url, "git@github.com:Coreastreet/system_classroom.git"
+set :repo_url, "https://github.com/Coreastreet/system_classroom.git"
 
 set :git_http_username, 'Coreastreet'
-set :git_http_password, ENV["GITHUB_TOKEN"]
+set :git_http_password, ENV["GITHUB_SSH_KEY"]
 
 set :branch, "main"
 set :repository_cache, "git_cache"
