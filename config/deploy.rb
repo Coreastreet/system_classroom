@@ -6,6 +6,9 @@ set :application, "system_classroom"
 set :git
 set :repo_url, "git@github.com:Coreastreet/system_classroom.git"
 
+set :git_http_username, 'Coreastreet'
+set :git_http_password, ENV["GITHUB_TOKEN"]
+
 set :branch, "main"
 set :repository_cache, "git_cache"
 set :deploy_via, :remote_cache
