@@ -2,7 +2,7 @@
 lock "~> 3.17.1"
 
 set :application, "system_classroom"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:Coreastreet/system_classroom.git"
 
 set :passenger_restart_with_touch, false # Note that `nil` is NOT the same as `false` here
 

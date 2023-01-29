@@ -7,7 +7,7 @@
             <%= link_to "< Prev", problem_path(@lesson),
                 class:"hover:bg-sky-100 px-4 py-2 md:py-4 flex-0 border-black bg-slate-grey md:text-2xl text-xl font-light rounded" %>
         <% else %>
-            <%= link_to "< Prev", lesson_page_path(lesson, (@page_index-1)),
+            <%= link_to "< Prev", lesson_page_path(@lesson, (@page_index-1)),
             class:"hover:bg-sky-100 px-4 py-2 md:py-4 flex-0 border-black bg-slate-grey md:text-2xl text-xl font-light rounded" %>
         <% end %>
         <div data-action="click->lesson-nav#toggle_page_list" class="static md:relative flex-1 flex justify-center md:max-w-[30rem]">
