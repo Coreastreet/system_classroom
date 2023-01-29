@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "show_lesson" do %>
+    <%= turbo_frame_tag @lesson do %>
+        <%= render partial: 'show', locals: { lesson: @lesson, subject: @subject } %>
+    <% end %>
+<% end %>

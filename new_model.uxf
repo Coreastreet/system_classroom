@@ -1,0 +1,144 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>198</y><w>180</w><h>144</h></coordinates><panel_attributes>&lt;&lt;Creator&gt;&gt;
+--
+- Name:String
+- Email:String
+- Password:digest
+
+--
+Responsibilities
+-- Post and manage videos.
+-- Receive payment
+-- Add a new subject category
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>0</y><w>171</w><h>162</h></coordinates><panel_attributes>&lt;&lt;Email&gt;&gt;
+--
+- Opt-out: Boolean
+- Email_address: string
+
+--
+
+--
+Responsibilities
+- Keep track of all the 
+   subscribers (email)
+- Exclude them if they 
+  have chosen to unsubscribe
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>405</x><y>396</y><w>135</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=
+m2=0..*
+has many &gt;</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>270</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Lesson&gt;&gt;
+--
+- Title: String
+- Subtitle: String
+- Description: text
+- Image (active-storage) 
+  for profile reference
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- 
+-- </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>297</y><w>180</w><h>144</h></coordinates><panel_attributes>&lt;&lt;Subject&gt;&gt;
+--
+- Title: string
+- Subtitle: String
+- Image: (active-storage) 
+  for relevance.
+
+--
+Responsibilities
+-- Post and manage videos.
+-- Receive payment
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>108</x><y>333</y><w>144</w><h>72</h></coordinates><panel_attributes>lt=-
+m1=
+m2=0..*
+has_many &gt;</panel_attributes><additional_attributes>10;10;140;60</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>315</y><w>162</w><h>45</h></coordinates><panel_attributes>
+m1=
+m2=
+has one &gt;</panel_attributes><additional_attributes>160;20;10;30</additional_attributes></element><element><id>UMLClass</id><coordinates><x>846</x><y>189</y><w>144</w><h>144</h></coordinates><panel_attributes>&lt;&lt;Problem&gt;&gt;
+--
+- Question: String
+- Scenario: Text
+- Image: active_storage
+- Funny_subtitle: string
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>387</y><w>135</w><h>90</h></coordinates><panel_attributes>
+m1=1..*
+m2=
+has many &gt;</panel_attributes><additional_attributes>130;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>414</y><w>189</w><h>180</h></coordinates><panel_attributes>&lt;&lt;TheoryChunk&gt;&gt;
+--
+- Mini-Goal : String
+- Tools: Action-Text
+- Summary_Image: active_storage
+- page_index: integer
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>567</x><y>540</y><w>225</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Summary&gt;&gt;
+--
+- Steps to solution Image: active_storage
+- The Alternative: active_storage
+  (table comparison)
+- Recap: Text
+- Animal picture: image 
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>432</y><w>90</w><h>126</h></coordinates><panel_attributes>
+m1=
+m2=
+has one &gt;</panel_attributes><additional_attributes>30;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>45</y><w>171</w><h>153</h></coordinates><panel_attributes>&lt;&lt;Device&gt;&gt;
+--
+- Browser: String
+- Device hardware: String
+
+--
+
+--
+Responsibilities
+- Keep track of all the 
+  chat identity through 
+  device info (Chat)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>999</x><y>513</y><w>135</w><h>90</h></coordinates><panel_attributes>
+m1=1..*
+m2=
+has many &gt;</panel_attributes><additional_attributes>130;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>891</x><y>585</y><w>117</w><h>144</h></coordinates><panel_attributes>
+m1=1..*
+m2=
+has many &gt;</panel_attributes><additional_attributes>70;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>891</x><y>711</y><w>189</w><h>144</h></coordinates><panel_attributes>&lt;&lt;TheoryPoint&gt;&gt;
+--
+- Title:string
+- Description: Text
+- Picture: activeStorage
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1116</x><y>585</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Exercise&gt;&gt;
+--
+- Title:string
+- Description: Text
+- Solution: Text
+- Picture: activeStorage
+
+--
+#Operation(i: int): int
+
+--
+Responsibilities
+-- </panel_attributes><additional_attributes></additional_attributes></element></diagram>

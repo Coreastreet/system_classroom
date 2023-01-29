@@ -1,0 +1,25 @@
+
+<div class="bg-slate-200 flex md:p-10 px-4 py-6">
+    <h1 class="text-2xl md:text-3xl md:font-semibold text-center w-full">
+        Software Architecture
+    </h1>       
+</div> 
+<div id="Search_subjects" class="flex flex-col md:px-10 pt-6 pb-2">
+    <% @subjects.each do |subject| %>
+            <%= link_to lessons_path(subject), class: "border-2 group rounded p-6 shadow-md hover:shadow-lg hover:border 
+                    hover:bg-emerald-50 hover:border-l-4 bg-white flex flex-col mb-4 mx-4" do %>
+                <div class="flex justify-between align-center">
+                    <span class="text-xl font-semibold group-hover:underline flex-1">
+                        <%= subject.title.capitalize %>
+                    </span>
+                    <div class="flex-0">
+                        <%= image_tag(subject.image, class: "object-contain max-h-16") %>
+                    </div>
+                </div>
+            <% end %>
+    <% end %>
+</div>
+
+<!---    <button class="rounded-3xl bg-slate-300 py-1 px-4">
+    Learn
+</button> -->

@@ -1,0 +1,25 @@
+<%= turbo_frame_tag "new_alternative" do %>
+    <%= form_with(model: @new_alternative, scope: :alternative, 
+      url: admin_summary_alternatives_path(@summary), multipart: true, class: "flex border border-slate-300 rounded") do |f| %>
+      <div class="flex-1 flex flex-col items-center rounded bg-white">
+        <%= f.hidden_field :summary_id, value: @summary.id %>
+        <div class="flex flex-col px-4 pt-4 w-full"> 
+            <span class="pb-2"><%= f.label :title %></span>
+            <span><%= f.text_field :title, class: "rounded w-full" %></span>
+        </div>     
+        <div class="flex flex-col p-4 w-full h-full"> 
+            <span class="pb-2"><%= f.label :description %></span>
+            <span class="h-full"><%= f.text_area :description, class: "rounded w-full h-full" %></span>
+        </div>    
+      </div>
+      <div class="flex-1 flex flex-col items-center rounded bg-white">                     
+        <div class="flex flex-col p-4 w-full h-full"> 
+            <span class="pb-2"><%= f.label :pros %></span>
+            <span class="h-full"><%= f.text_area :pros, class: "rounded grow-1 w-full" %></span>
+            <span class="py-2"><%= f.label :cons %></span>
+            <span class="h-full"><%= f.text_area :cons, class: "rounded grow-1 w-full" %></span>
+            <%= f.submit "Create alternative", class: "btn btn-blue text-sm rounded font-light mt-4" %>
+        </div>    
+      </div>
+    <% end %>
+<% end %>
