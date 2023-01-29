@@ -3,7 +3,7 @@ lock "~> 3.17.1"
 
 set :application, "system_classroom"
 
-set :scm, :git
+set :git
 set :repo_url, "git@github.com:Coreastreet/system_classroom.git"
 
 set :branch, "main"
