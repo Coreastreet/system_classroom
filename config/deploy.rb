@@ -2,8 +2,14 @@
 lock "~> 3.17.1"
 
 set :application, "system_classroom"
+
+set :scm, :git
 set :repo_url, "git@github.com:Coreastreet/system_classroom.git"
 
+set :branch, "main"
+set :repository_cache, "git_cache"
+set :deploy_via, :remote_cache
+set :ssh_options, { :forward_agent => true }
 set :passenger_restart_with_touch, false # Note that `nil` is NOT the same as `false` here
 
 set :deploy_to, "/home/deploy/#{fetch :application}"
