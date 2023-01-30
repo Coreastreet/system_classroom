@@ -19,8 +19,12 @@ set :deploy_to, "/home/deploy/#{fetch :application}"
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 set :rbenv_prefix, '/usr/bin/rbenv exec'
-set :rbenv_type, :user
-set :rbenv_ruby, "3.1.3"
+set :keep_releases, 5
+
+set :default_env, {
+    path: '/usr/local/rbenv/plugins/ruby-build/bin:/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH',
+    rbenv_root: '/usr/local/rbenv'
+}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
