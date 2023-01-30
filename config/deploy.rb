@@ -23,7 +23,8 @@ set :keep_releases, 5
 
 set :default_env, {
     path: '/usr/local/rbenv/plugins/ruby-build/bin:/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH',
-    rbenv_root: '/usr/local/rbenv'
+    rbenv_root: '/Users/justinye/.rbenv
+    '
 }
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
