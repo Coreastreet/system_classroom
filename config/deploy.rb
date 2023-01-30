@@ -21,6 +21,8 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 set :rbenv_prefix, '/usr/bin/rbenv exec'
 set :rbenv_type, :user
 set :rbenv_ruby, "3.1.3"
+
+append :linked_files,  'config/credentials/production.key'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
