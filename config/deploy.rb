@@ -18,7 +18,7 @@ set :passenger_restart_with_touch, false # Note that `nil` is NOT the same as `f
 set :deploy_to, "/home/deploy/#{fetch :application}"
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
-set :chruby_ruby, 'ruby-3.1.3'
+set :rbenv_prefix, '/usr/bin/rbenv exec'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
