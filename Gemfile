@@ -53,12 +53,13 @@ gem "image_processing", "~> 1.2"
 
 gem 'rename'
 
+# since we are using env variables in production too.
+gem 'dotenv-rails'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  # for recording the password for psql.
-  gem 'dotenv-rails'
-  
+  # for recording the password for psql.  
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
