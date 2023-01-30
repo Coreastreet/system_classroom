@@ -60,6 +60,7 @@ group :development, :test do
   gem 'dotenv-rails'
   
   gem 'capistrano'
+  gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
 end
