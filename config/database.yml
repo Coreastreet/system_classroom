@@ -86,4 +86,3 @@ test:
 production:
   <<: *default
   database: <%= ENV['POSTGRES_DB'] %>
-  port: 5433
