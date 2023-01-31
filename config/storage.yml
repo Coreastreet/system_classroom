@@ -6,6 +6,13 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+backblaze:
+  service: Backblaze
+  bucket_name: system-classroom
+  bucket_id: 3efdb50ca3d90c6487600d15
+  key_id: 000ed5c39c470d50000000003
+  key_token: K000tD5p5yBRnUVmDmOmd47bj6FZklM
+
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
