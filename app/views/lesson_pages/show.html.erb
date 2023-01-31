@@ -31,7 +31,7 @@
   <div class="md:py-6 editable"><%= @page.title %></div>
 </div>
 <% @theory_points.each_with_index do |theory_point, index| %>  
-  <div class="pb-6 bg-[#F7FCFC]">
+  <div class="pb-6 <%= ((index.even?) ? 'bg-white' : 'bg-[#F7FCFC]') %>">
       <div class='<%= "flex flex-col md:px-10 mb-4 " + ((index.even?) ? "md:flex-row" : "md:flex-row-reverse") + " pt-6 md:pt-10" %>'>
           <div class="mx-10 flex flex-col items-center">
               <figure class="max-w-[35vw]">
