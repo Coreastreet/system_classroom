@@ -11,7 +11,6 @@ class Admin::SubjectsController < ApplicationController
 
   def create
     subject_params[:title].capitalize!
-    debugger
     @subject = Subject.create!(subject_params)
   end
 

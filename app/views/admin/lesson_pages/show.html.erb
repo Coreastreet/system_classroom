@@ -17,7 +17,6 @@
                 </div>
             </div>
         </div>
-
     <div class="flex flex-col flex-1">
         <div class="flex justify-between py-4">
             <span class="text-lg self-center">
@@ -65,7 +64,7 @@
                                         <%= link_to admin_theory_point_path(theory_point), data: { 'turbo-method': :delete,  'turbo-confirm': "Are you sure?" } do %>
                                             <span class="cross">&#9587;</span>
                                         <% end %>
-                                        <div class="pt-6 flex flex-col md:flex-row mb-4">
+                                        <div class="flex flex-col md:flex-row mb-4">
                                             <div class="ml-6 flex flex-col items-center justify-center">
                                                 <label for=<%= "theory_point_image_uploads_#{index}" %> class="hover:cursor-pointer max-w-[10rem]">
                                                     <% if theory_point.image.representable? %>
@@ -74,7 +73,7 @@
                                                     <% else %>
                                                         <%= image_tag(image_path('upload_image.png'), class: "object-fill",  data: { 'admin-target':'imageBox' }) %>
                                                     <% end %>
-                                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg", 
+                                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg", direct_upload: true,
                                                             class: "image_fill hidden", data: { 'action': 'change->admin#display_image', 'admin-target':'imageInput' } %>
                                                 </label>
                                             </div>
@@ -91,7 +90,7 @@
                                         <%= link_to admin_theory_point_path(theory_point), data: { 'turbo-method': :delete, 'turbo-confirm': "Are you sure?" } do %>
                                             <span class="cross">&#9587;</span>
                                         <% end %>
-                                        <div class="pt-6 flex flex-col md:flex-row mb-4">
+                                        <div class="flex flex-col md:flex-row pb-4">
                                             <div class="flex flex-col items-center flex-1">
                                                 <%= ff.text_field :title, class: "w-[85%] px-2 py-0 text-lg font-light italic text-center
                                                     border-0 border-b border-solid border-b-blue-300 focus:border-b-blue-800 focus:ring-0" %>
@@ -106,7 +105,7 @@
                                                     <% else %>
                                                         <%= image_tag(image_path('upload_image.png'), class: "object-fill",  data: { 'admin-target':'imageBox' }) %>
                                                     <% end %>
-                                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg", 
+                                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg",  direct_upload: true,
                                                             class: "image_fill hidden", data: { 'action': 'change->admin#display_image', 'admin-target':'imageInput' } %>
                                                 </label>
                                             </div>

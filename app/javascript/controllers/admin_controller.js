@@ -258,11 +258,4 @@ export default class extends Controller {
             lesson_button.classList.add("selected");
         }       
     }
-
-    image_upload(event) {
-        console.log("image uploaded");
-        event.target.addEventListener("direct-upload:initialize", function() {
-                console.log("direct upload is starting");
-        });
-    }
 }
