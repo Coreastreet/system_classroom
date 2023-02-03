@@ -14,7 +14,7 @@ export default class extends Controller {
       for (var i = 0; i < image_file_inputs.length; i++) {
             image_file_inputs[i].addEventListener('change', function(event) {
                 var image_frame = this.parentElement.querySelector('.image_display');
-                console.log(image_frame);
+                console.log(event.target);
                 image_frame.src = URL.createObjectURL(event.target.files[0]);
             }, false);
       }
