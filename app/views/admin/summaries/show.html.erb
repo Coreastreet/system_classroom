@@ -1,5 +1,5 @@
 <div class="flex flex-row px-6 pb-8">
-        <div class="flex flex-col flex-nowrap mx-4 mt-6">
+        <div class="md:flex flex-col flex-nowrap mx-4 mt-6 hidden">
             <div class="flex pb-4 mr-4 justify-center">
                 <span class="text-2xl font-bold align-center"><%= @lesson.title %></span>
             </div>
@@ -181,6 +181,12 @@
                         </div>
                     </div>
                 <% end %>
+        </div>
+        <div class="flex flex-col flex-nowrap">
+            <div class="md:hidden flex my-4 mr-4">
+                <%= link_to "Prev", admin_lesson_page_path(@last_lesson_page),  
+                    class:"btn btn-blue justify-center flex flex-1 rounded px-6 py-2 shadow-md text-sm font-light hover:cursor-pointer" %>
+            </div>
         </div>
       </div>
 </div>
