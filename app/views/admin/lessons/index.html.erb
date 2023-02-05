@@ -14,8 +14,15 @@
             <% @lessons.each_with_index do |lesson, index| %>
                     <%= link_to admin_lesson_index_show_path(lesson), class: "mr-4 mb-3 w-[15rem] group rounded px-6 py-2 shadow-md lesson_page_button
                                 flex items-center flex-col h-fit unselected" do %>
-                                <div class="w-full flex justify-between items-center">
-                                    <span class="text-xl font-semibold group-hover:underline flex-1">
+                                <div class="w-full flex flex-col justify-between items-center">
+                                    <div class="flex-1 flex py-2">
+                                        <% if lesson.image.representable? %>
+                                            <%= image_tag(lesson.image.representation(resize_to_limit: [300, 300]), class: "object-fill max-h-32") %>
+                                        <% else %>
+                                            <%= image_tag(image_path('upload_image.png'), class: "object-fill max-h-32") %>
+                                        <% end %>
+                                    </div>
+                                    <span class="text-center text-xl font-semibold group-hover:underline flex-1">
                                         <%= lesson.title.capitalize %>
                                     </span>
                                 </div>

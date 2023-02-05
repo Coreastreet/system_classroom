@@ -48,7 +48,7 @@
                             <% else %>
                                 <%= image_tag(image_path('upload_image.png'), class: "object-fill",  data: { 'admin-target':'imageBox' }) %>
                             <% end %>
-                            <%= f.file_field :aftermath_image, type: "file", id: "aftermath_image_uploads", accept: ".png, .jpeg, .jpg", direct_upload: true,
+                            <%= f.file_field :aftermath_image, type: "file", id: "aftermath_image_uploads", accept: ".png, .jpeq, .jpg, .webP", direct_upload: true,
                                     class: "image_fill hidden", data: { 'action': 'change->admin#display_image', 'admin-target':'imageInput' } %>
                         </label>
                         <div class="flex-1 px-4 flex flex-col justify-between align-center">
@@ -103,7 +103,7 @@
                                     <% else %>
                                             <%= image_tag(image_path('upload_image.png'), class: "object-contain",  data: { 'admin-target':'imageBox2' }) %>
                                     <% end %>
-                                    <%= f.file_field :process_diagram, type: "file", id: "process_diagram_uploads", accept: ".png, .jpeg, .jpg", direct_upload: true,
+                                    <%= f.file_field :process_diagram, type: "file", id: "process_diagram_uploads", accept: ".png, .jpeq, .jpg, .webP", direct_upload: true,
                                             class: "image_fill hidden", data: { 'action': 'change->admin#display_image2', 'admin-target':'imageInput2' } %>
                                 </label>
                         </div>

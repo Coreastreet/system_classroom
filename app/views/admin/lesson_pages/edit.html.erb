@@ -33,7 +33,7 @@
                                     <% else %>
                                         <%= image_tag(image_path('upload_image.png'), class: "object-fill",  data: { 'admin-target':'imageBox' }) %>
                                     <% end %>
-                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg", direct_upload: true,
+                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeq, .jpg, .webP", direct_upload: true,
                                             class: "image_fill hidden", data: { 'action': 'change->admin#display_image', 'admin-target':'imageInput' } %>
                                 </label>
                             </div>
@@ -65,7 +65,7 @@
                                     <% else %>
                                         <%= image_tag(image_path('upload_image.png'), class: "object-fill",  data: { 'admin-target':'imageBox' }) %>
                                     <% end %>
-                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeg, .jpg", direct_upload: true,
+                                    <%= ff.file_field :image, type: "file", id: "theory_point_image_uploads_#{index}", accept: ".png, .jpeq, .jpg, .webP", direct_upload: true,
                                             class: "image_fill hidden", data: { 'action': 'change->admin#display_image', 'admin-target':'imageInput' } %>
                                 </label>
                             </div>
