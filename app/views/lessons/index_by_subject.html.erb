@@ -10,8 +10,8 @@
                     <%= lesson.title.capitalize %>
                 </span>
                 <div class="flex-0">
-                    <% if subject.image.representable? %>
-                        <%= image_tag(subject.image, class: "object-contain max-h-16") %>
+                    <% if lesson.image.representable? %>
+                        <%= image_tag(lesson.image, class: "object-contain max-h-16") %>
                     <% else %>
                         <%= image_tag(image_path('upload_image.png'), class: "object-contain max-h-16") %>
                     <% end %>
