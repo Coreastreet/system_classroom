@@ -4,12 +4,12 @@
         Software Architecture
     </h1>       
 </div> 
-<div id="Search_subjects" class="flex flex-col md:px-10 pt-6 pb-2">
+<div id="Search_subjects" class="flex flex-wrap md:px-10 pt-6 pb-2">
     <% @subjects.each do |subject| %>
-            <%= link_to lessons_path(subject), class: "border-2 group rounded p-6 shadow-md hover:shadow-lg hover:border 
+            <%= link_to lessons_path(subject), class: "w-full border-2 group rounded p-6 shadow-md hover:shadow-lg hover:border 
                     hover:bg-emerald-50 hover:border-l-4 bg-white flex flex-col mb-4 mx-4" do %>
                 <div class="flex justify-between align-center">
-                    <span class="text-xl font-semibold group-hover:underline flex-1">
+                    <span class="text-xl font-semibold group-hover:underline flex-1 mr-4">
                         <%= subject.title.capitalize %>
                     </span>
                     <div class="flex-0">
@@ -21,6 +21,21 @@
                     </div>
                 </div>
             <% end %>
+            <!--
+            <%= link_to lessons_path(subject), class: "mb-6 mr-6 w-[12rem] border-2 group rounded p-6 shadow-md hover:shadow-lg hover:border 
+                            hover:bg-emerald-50 hover:border-l-4 bg-white flex flex-col items-center" do %>
+                        <div class="flex-0">
+                            <% if subject.image.representable? %>
+                                <%= image_tag(subject.image.representation(resize_to_limit: [300, 300]), class: "object-contain max-h-32") %>
+                            <% else %>
+                                <%= image_tag(image_path('upload_image.png'), class: "object-contain max-h-32") %>
+                            <% end %>
+                        </div>
+                        <span class="text-xl font-semibold group-hover:underline flex-1 pt-2">
+                            <%= subject.title.capitalize %>
+                        </span>
+            <% end %>
+            -->
     <% end %>
 </div>
 
