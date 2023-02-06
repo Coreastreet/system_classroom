@@ -24,7 +24,7 @@ export default class extends Controller {
 
   show_answer(event) {
       var show_answer_button = event.target;
-      var answer_holder = show_answer_button.closest(".answerHolder").querySelector(".invisible");
+      var answer_holder = show_answer_button.closest(".answer").querySelector(".invisible");
 
       show_answer_button.classList.add("hidden");
       show_answer_button.nextElementSibling.classList.remove("hidden");
