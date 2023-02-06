@@ -3,7 +3,7 @@
 </div>
 <div class="pb-6 bg-[#F7FCFC]">
     <div class='<%= "flex flex-col md:px-10 md:flex-row pt-6 md:pt-10 justify-center" %>'>
-        <figure class="mx-10 items-center flex flex-col justify-center">
+        <figure class="mb-6 mx-10 items-center flex flex-col justify-center">
             <% if @image.representable? %>
                 <%= image_tag(@image.representation(resize_to_limit: [300, 300]),
                     class: "object-contain w-48 min-w-[12rem]") %>
@@ -24,14 +24,14 @@
     </div>
 </div>
 <div class="bg-[#F7FCFC] flex justify-center">
-    <div class="mx-10 flex flex-col items-center flex-1 max-w-5xl mb-10">
+    <div class="mx-10 flex flex-col items-center flex-1 max-w-[64rem]">
         <div class="text-2xl max-w-3xl text-center pb-4 pt-6">
             <%= @lesson.subtitle.capitalize %>
         </div>
        <div class="p-2 text-lg flex-1">
              <%= @lesson.description %>
        </div>
-       <%= link_to problem_path(@lesson), class: "p-4" do %>
+       <%= link_to problem_path(@lesson), class: "p-4 mb-10" do %>
          <button class="btn btn-blue border-black bg-slate-grey text-3xl font-light w-full rounded-xl">
                  Start Lesson
          </button>
