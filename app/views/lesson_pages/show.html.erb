@@ -48,7 +48,7 @@
                   <%= theory_point.title %>
               </div>
               <div class="w-full text-lg">
-                  <%= simple_format theory_point.description %>
+                  <%= simple_formattheory_point.description %>
               </div>
           </div>
       </div>
@@ -74,7 +74,7 @@
                         </button>
                         <span class="text-2xl self-center hidden">Answer:</span>
                     </div>
-                    <div class="invisible">
+                    <div class="invisible" data-accordion-target="answerHolder">
                         <p class="text-lg pt-4">
                             <%= @page.answers[index-1] %>
                         </p>
