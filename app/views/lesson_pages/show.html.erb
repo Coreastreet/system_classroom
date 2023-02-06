@@ -66,7 +66,7 @@
                 <p class="text-lg p-6">
                    <%= exercise %>
                 </p>
-                <div class="px-6 pb-6">
+                <div class="px-6 pb-6 answerHolder">
                     <div class="flex">
                         <button class="flex-0 btn btn-blue border-black bg-slate-grey text-lg font-light rounded-md" 
                                 data-action="click->accordion#show_answer">
@@ -74,7 +74,7 @@
                         </button>
                         <span class="text-2xl self-center hidden">Answer:</span>
                     </div>
-                    <div class="invisible" data-accordion-target="answerHolder">
+                    <div class="invisible">
                         <p class="text-lg pt-4">
                             <%= @page.answers[index-1] %>
                         </p>

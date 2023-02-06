@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
 
-  static targets = [ "accContainer", "answerHolder"];
+  static targets = [ "accContainer"];
   
   connect() {
       var acc_container = this.accContainerTarget;
@@ -23,9 +23,8 @@ export default class extends Controller {
   }
 
   show_answer(event) {
-      console.log("clicked");
-      var answer_holder = this.answerHolderTarget;
       var show_answer_button = event.target;
+      var answer_holder = show_answer_button.closest(".answerHolder").querySelector(".invisible");
 
       show_answer_button.classList.add("hidden");
       show_answer_button.nextElementSibling.classList.remove("hidden");

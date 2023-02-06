@@ -47,9 +47,9 @@
         <div class="text-2xl text-center pt-4">
             Key Points:
         </div>
-        <ul class="p-6 list-disc text-lg">
+        <ul class="py-6 list-disc text-lg">
             <% @summary.key_points.each do |key_point| %>
-                <li><%= key_point %></li>
+                <li class="mb-4"><%= key_point %></li>
             <% end %>
         </ul>
     </div>
@@ -97,9 +97,9 @@
         <div class="text-2xl text-center pt-4">
             Further Reading:
         </div>
-        <ul class="p-6 list-disc text-lg">
+        <ul class="py-6 list-disc text-lg">
             <% @summary.sources.each do |source| %>
-                <li><%= link_to source, source, class: "hover:underline hover:text-blue-400" %></li>
+                <li class="mb-4"><%= link_to source, source, class: "hover:underline hover:text-blue-400" %></li>
             <% end %>
         </ul>
     </div>
