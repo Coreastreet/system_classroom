@@ -2,39 +2,39 @@
       <div class="py-6"><%= @lesson.title.capitalize %></div>
 </div>
 <div class="pb-6 bg-[#F7FCFC]">
-    <div class='<%= "flex flex-col md:px-10 mb-4 md:flex-row pt-6 md:pt-10" %>'>
-        <figure class="mx-10 flex flex-1 flex-col items-center">
+    <div class='<%= "flex md:px-10 mb-4 md:flex-row pt-6 md:pt-10 justify-center" %>'>
+        <figure class="mx-10 items-center">
             <% if @image.representable? %>
                 <%= image_tag(@image.representation(resize_to_limit: [300, 300]),
-                    class: "object-fill w-full") %>
+                    class: "object-fill max-h-48") %>
             <% else %>
                 <%= image_tag(image_path('upload_image.png'), class: "object-fill w-full") %>
             <% end %>
         </figure>
-        <div class="mx-10 flex flex-col items-center flex-1">
-            <div class="text-2xl text-center pb-4 pt-6">
-                <%= @lesson.subtitle.capitalize %>
+        <div class="mx-10 p-6 flex flex-col items-start border-4 border-gray-300 rounded bg-white">
+            <div class="text-2xl pl-6 pt-4">
+                Lesson Objectives:
             </div>
-           <div class="p-2 text-lg flex-1">
-                 <%= @lesson.description %>
-           </div>
-           <%= link_to problem_path(@lesson), class: "p-4" do %>
-             <button class="btn btn-blue border-black bg-slate-grey text-3xl font-light w-full rounded-xl">
-                     Start Lesson
-             </button>
-           <% end %>
-       </div>
+            <ul class="p-6 text-lg list-disc">
+                <% @lesson.objectives.each do |objective| %>
+                    <li class="mb-2"><%= objective %></li>
+                <% end %>
+            </ul>
+        </div>
     </div>
 </div>
-<div class="bg-[#F7FCFC]">
-    <div class="mx-10 p-6 flex flex-col items-center">
-        <div class="text-2xl text-center pt-4">
-            Lesson Objectives:
+<div class="bg-[#F7FCFC] flex justify-center">
+    <div class="mx-10 flex flex-col items-center flex-1 max-w-5xl mb-10">
+        <div class="text-2xl max-w-3xl text-center pb-4 pt-6">
+            <%= @lesson.subtitle.capitalize %>
         </div>
-        <ul class="p-6 text-lg list-disc">
-            <% @lesson.objectives.each do |objective| %>
-                <li class="mb-2"><%= objective %></li>
-            <% end %>
-        </ul>
-    </div>
+       <div class="p-2 text-lg flex-1">
+             <%= @lesson.description %>
+       </div>
+       <%= link_to problem_path(@lesson), class: "p-4" do %>
+         <button class="btn btn-blue border-black bg-slate-grey text-3xl font-light w-full rounded-xl">
+                 Start Lesson
+         </button>
+       <% end %>
+   </div>
 </div>
