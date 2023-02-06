@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
 
-  static targets = [ "accContainer"];
+  static target = ["accContainer"];
   
   connect() {
       var acc_container = this.accContainerTarget;
