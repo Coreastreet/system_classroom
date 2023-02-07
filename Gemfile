@@ -58,6 +58,8 @@ gem 'dotenv-rails'
 
 gem 'aws-sdk-s3'
 # gem 'activestorage-backblaze', '~> 0.0.5'
+gem "sentry-ruby"
+gem "sentry-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
