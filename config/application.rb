@@ -14,7 +14,11 @@ module SystemClassroom
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    # config.logger = Logger.new("log/#{Rails.env}.log")
+    logger = Logger.new("log/#{Rails.env}.log")
+    logger.formatter = proc do |severity, datetime, progname, msg|
+      "#{severity}: #{msg}\n"
+    end
+    config.logger = logger
     # set the minimum log level
     # config.log_level = :debug
 
