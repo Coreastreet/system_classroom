@@ -4,9 +4,16 @@ class ApplicationController < ActionController::Base
     helper_method :current_creator
     helper_method :authenticate
     helper_method :render_flash
+    helper_method :slugify
 
     # helper_method :current_auth_token
     # helper_method :require_guest_uuid
+
+    def slugify(str)
+        if str.present?
+            str.gsub(" ", "-").downcase
+        end
+    end
 
     def logged_in_as_creator?
         !!current_creator

@@ -46,7 +46,7 @@ class Admin::LessonsController < ApplicationController
       lesson.update!(lesson_params)
 
       flash[:notice] = 'Lesson updated successfully'
-      redirect_to admin_lesson_index_show_path(updated_title)
+      redirect_to admin_lesson_index_show_path(slugify(updated_title))
   end
 
   def destroy
