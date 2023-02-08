@@ -14,9 +14,9 @@ module SystemClassroom
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.logger = Logger.new('log/#{Rails.env}.log')
+    config.logger = ActiveSupport::TaggedLogging.new("log/#{Rails.env}.log")
     # set the minimum log level
-    config.log_level = :warn
+    # config.log_level = :debug
 
     # Configuration for the application, engines, and railties goes here.
     #
