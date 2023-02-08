@@ -43,10 +43,10 @@ class Admin::LessonsController < ApplicationController
       subject = lesson.subject
       # capitalize before saving
       lesson_params[:title].capitalize!
-      lesson.update!(lesson_params)
+      updated_lesson = lesson.update!(lesson_params)
 
       flash[:notice] = 'Lesson updated successfully'
-      redirect_to admin_lesson_index_show_path(lesson)
+      redirect_to admin_lesson_index_show_path(updated_lesson)
   end
 
   def destroy

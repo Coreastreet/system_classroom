@@ -4,7 +4,7 @@ plugin "bundler"
 plugin "rails"
 plugin "puma"
 plugin "rbenv"
-plugin "./plugins/system_classroom.rb"
+plugin "./plugins/app.rb"
 
 host "deployer@172.105.177.159"
 
