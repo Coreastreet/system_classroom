@@ -14,7 +14,7 @@ module SystemClassroom
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    logger.formatter = config.log_formatter
+    logger.datetime_format = '%Y-%m-%d %H:%M:%S'
     config.logger = ActiveSupport::TaggedLogging.new("log/#{Rails.env}.log")
     # set the minimum log level
     # config.log_level = :debug
